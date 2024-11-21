@@ -14,9 +14,13 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
 
             $table->id();
-
-            $table->string('name')->unique();
-
+    
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('operator_id')->constrained()->onDelete('cascade');
+            $table->string('title');
+            $table->text('description');
+            $table->enum('status', ['Assigned', 'Working On', 'Closed']);
+    
             $table->timestamps();
         });
     }

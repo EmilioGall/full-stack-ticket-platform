@@ -15,11 +15,7 @@ return new class extends Migration
 
             $table->id();
 
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('operator_id')->constrained()->onDelete('cascade');
-            $table->string('title');
-            $table->text('description');
-            $table->enum('status', ['Assigned', 'Working On', 'Closed']);
+            $table->string('name')->unique();
 
             $table->timestamps();
         });
