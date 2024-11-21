@@ -33,12 +33,3 @@ Per questa fase non è prevista alcuna visualizzazione avanzata dei ticket se no
     
     ➕➕ **Bonus 2**
     In fase di assegnazione di un ticket, aggiungiamo la verifica della disponibilità dell’operatore. Un operatore è occupato quando ha un ticket attivo già assegnato.
-
-📃 **Documentazione, documentazione, documentazione!** 📃
-
-👑 Ogni progetto che si rispetti, ha una presentazione degna del suo nome! 👑
-
-In parallelo allo sviluppo, lavoriamo ad un file readme che **elenchi i requisiti e le funzionalità** del progetto, **commentando e documentando** il ****codice sviluppato nel modo più preciso, ordinato e professionale possibile.
-
-**Attenzione**: la documentazione non è in alcun modo una caratteristica secondaria di un progetto, ma ne è non solo parte integrante, ma **biglietto da visita e presentazione**… 
-⬆️ Quindi è veramente fondamentale! ⬆️
