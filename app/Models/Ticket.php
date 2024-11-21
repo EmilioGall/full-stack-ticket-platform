@@ -20,6 +20,13 @@ class Ticket extends Model
 
     ];
 
+    // A ticket belongs to one Admin user
+    public function user()
+    {
+
+        return $this->belongsTo(User::class);
+    }
+
     // A ticket belongs to one operator
     public function operator()
     {

@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // One Admin user can be assigned to multiple tickets
+    public function tickets()
+    {
+
+        return $this->hasMany(Ticket::class);
+    }
 }
