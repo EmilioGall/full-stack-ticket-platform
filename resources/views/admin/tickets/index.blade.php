@@ -40,7 +40,11 @@
 
                            @foreach ($ticketsArray as $ticket)
                               <tr>
-                                 <td>{{ $ticket['id'] }}</td>
+
+                                 <td>
+                                    <a href="{{ route('admin.ticket.show', ['ticket' => $ticket]) }}">{{ $ticket['id'] }}
+                                    </a>
+                                 </td>
                                  <td>{{ $ticket['title'] }}</td>
                                  <td>{{ $ticket['created_at'] }}</td>
                                  <td>{{ $ticket->operator->name }}</td>
