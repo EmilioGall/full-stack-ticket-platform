@@ -67,9 +67,12 @@ class TicketController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Ticket $ticket)
     {
-        //
+
+        // dd($ticket);
+
+        return view('admin.tickets.show', compact('ticket'));
     }
 
     /**
