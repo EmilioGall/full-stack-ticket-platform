@@ -28,7 +28,7 @@
                            <tr>
                               <th scope="col">#</th>
                               <th scope="col">Title</th>
-                              <th scope="col">Description</th>
+                              <th scope="col">Date</th>
                               <th scope="col">Operator</th>
                               <th scope="col">Category</th>
                               <th scope="col">Status</th>
@@ -42,7 +42,7 @@
                               <tr>
                                  <td>{{ $ticket['id'] }}</td>
                                  <td>{{ $ticket['title'] }}</td>
-                                 <td>{{ $ticket['description'] }}</td>
+                                 <td>{{ $ticket['created_at'] }}</td>
                                  <td>{{ $ticket->operator->name }}</td>
                                  <td>{{ $ticket->category->name }}</td>
                                  <td>{{ $ticket['status'] }}</td>
