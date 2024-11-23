@@ -28,14 +28,25 @@
 
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
             <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">{{ config('app.name', 'Laravel') }}</a>
+
+                <h1>
+
+                    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">{{ config('app.name', 'Laravel') }}</a>
+
+                </h1>
+
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
+
             </div>
+
             <div class="navbar-nav">
+
                 <div class="nav-item text-nowrap ms-2">
                     <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -46,7 +57,9 @@
                         @csrf
                     </form>
                 </div>
+
             </div>
+            
         </header>
 
         <div class="container-fluid vh-100">
@@ -70,14 +83,14 @@
                                     href="{{ route('dashboard') }}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Add Ticket
                                 </a>
-                            </li>
+                            </li> --}}
 
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.tickets.index' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('dashboard') }}">
+                                    href="{{ route('admin.ticket.index') }}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> All Tickets
                                 </a>
-                            </li> --}}
+                            </li>
 
                         </ul>
 
