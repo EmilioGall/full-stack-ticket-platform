@@ -59,7 +59,7 @@
                 </div>
 
             </div>
-            
+
         </header>
 
         <div class="container-fluid vh-100">
@@ -78,17 +78,17 @@
                                 </a>
                             </li>
 
-                            {{-- <li class="nav-item">
-                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.tickets.create' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('dashboard') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Add Ticket
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.ticket.create' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.ticket.create') }}">
+                                    <i class="fa-solid fa-plus fa-lg fa-fw"></i> Add Ticket
                                 </a>
-                            </li> --}}
+                            </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.tickets.index' ? 'bg-secondary' : '' }}"
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.ticket.index' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.ticket.index') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> All Tickets
+                                    <i class="fa-solid fa-list-ul fa-lg fa-fw"></i> All Tickets
                                 </a>
                             </li>
 
@@ -105,5 +105,28 @@
 
     </div>
 </body>
+
+<style>
+    #sidebarMenu{
+        .nav-link {
+               border-radius: 5px;
+               border-radius: 5px;
+               transition: background-color 0.5s ease, opacity 0.5s ease;
+               &:hover {
+                  opacity: 50%;
+                  background-color: grey;
+   
+               }
+   
+               &.active {
+                  color: white;
+                  width: 120%;
+                  background-color: {{ env('color_secondary') }};
+               }
+   
+            }
+    }
+
+</style>
 
 </html>
