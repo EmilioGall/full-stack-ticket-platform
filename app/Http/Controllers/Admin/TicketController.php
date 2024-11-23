@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -11,7 +13,11 @@ class TicketController extends Controller
      */
     public function index()
     {
-        //
+        $ticketsArray = Ticket::with(['category', 'operator'])->get();
+
+        // dd($ticketsArray);
+
+        return view('admin.tickets.index', compact('ticketsArray'));
     }
 
     /**
